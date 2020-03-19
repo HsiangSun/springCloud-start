@@ -1,0 +1,10 @@
+server:
+   port: 7777
+   
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://unicom.com:10010/eureka/,http://mobile.com:10086/eureka/
+   

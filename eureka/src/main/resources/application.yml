@@ -1,0 +1,13 @@
+server:
+   port: 10086
+
+eureka:
+  instance:
+    hostname: mobile.com
+  client:
+    register-with-eureka: false #自己不向注册中心注册自己
+    fetch-registry: false #我就是中心不需要去检索其他服务
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://unicom.com:10010/eureka/ #移动呼叫联通
+   

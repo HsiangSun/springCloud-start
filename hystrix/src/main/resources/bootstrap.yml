@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config: 
+      name: dept-server-8002 #git上面的配置文件的名字 没有yml  例如： application.yml
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:3344

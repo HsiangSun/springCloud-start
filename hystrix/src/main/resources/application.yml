@@ -1,0 +1,42 @@
+#server:
+#   port: 8002
+#   
+#mybatis:
+#   #config-location: classpath:mybatis/mybatis.cfg.xml
+#   type-aliases-package: cn.hsiangsun.springcloud.entity
+#   mapper-locations: classpath:mybatis/mapper/**/*Mapper.xml
+#   
+#spring:
+#   application:
+#      name: microservice-cloud-dept
+#   datasource:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://127.0.0.1:3306/cloudDb02
+#      username: root
+#      password: 1314
+#      dbcp2:
+#         min-idle: 5
+#         initial-size: 5
+#         max-total: 5
+#         max-wait-millis: 200 
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://mobile.com:10086/eureka/,http://unicom.com:10010/eureka/
+#  instance:
+#    instance-id: cloudService-dept[8002] #当前微服务别名
+#    prefer-ip-address: true #显示当前服务所在ip
+#
+##当前微服务的信息 
+#info:
+#  app.name: hsiangsun-cloud-dept
+#  author: hsiangsun
+#  contact: hsiangusn1997@gmail.com
+#  build.artifactId: $project.artifactId$
+#  build.version: $project.version$
+#  instance-id: 2333
+#      
+#      
+#   

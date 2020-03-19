@@ -1,0 +1,19 @@
+server:
+   port: 8080
+   
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://unicom.com:10010/eureka/,http://mobile.com:10086/eureka/
+ 
+#开启服务降级enabled！！！不是enable排查了几小时卧槽
+feign:  
+  hystrix:
+    enabled: true
+      
+#Feign负载均衡设置 
+MICROSERVICE-CLOUD-DEPT:  #微服务名称
+  ribbon:
+    NFLoadBalancerRuleClassName: cn.hsiangsun.rule.FiveChance  #负载策略对应的类

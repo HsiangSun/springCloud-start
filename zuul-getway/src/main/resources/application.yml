@@ -1,0 +1,35 @@
+server:
+   port: 9527
+   
+spring:
+   application:
+      name: microservice-cloud-getway
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://mobile.com:10086/eureka/,http://unicom.com:10010/eureka/
+  instance:
+    instance-id: cloudService-getway[9527] #当前微服务别名
+    prefer-ip-address: true #显示当前服务所在ip
+
+#zuul网关映射  
+zuul:
+  prefix: /hsiangsun #前缀
+  ignored-services: microservice-cloud-dept #忽略服务原路径
+  #ignored-services: "*" #忽略所有服务原路径
+  routes:
+    dept.serviceId: microservice-cloud-dept
+    dept.path: /mydept/**
+
+#当前微服务的信息 
+info:
+  app.name: hsiangsun-cloud-getway
+  author: hsiangsun
+  contact: hsiangusn1997@gmail.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+  instance-id: 2333
+      
+      
+   
