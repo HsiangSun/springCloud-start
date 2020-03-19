@@ -1,0 +1,9 @@
+.dbeaver/
+.settings/
+.project
+.classpath
+
+*/.settings/
+*/src/test/
+*/target/
+*/.dbeaver/
